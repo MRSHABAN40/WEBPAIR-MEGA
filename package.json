@@ -15,7 +15,7 @@
   },
   "author": "GlobalTechInfo",
   "license": "ISC",
-  "description": "the silent-sobx-md pair",
+  "description": "the shaban-sobx-md pair",
   "dependencies": {
     "@whiskeysockets/baileys": "6.7.9",
     "qrcode": "^1.5.4",
