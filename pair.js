@@ -69,14 +69,14 @@ router.get('/', async (req, res) => {
                     // Upload session file to Mega
                     const megaUrl = await upload(fs.createReadStream(`${dirs}/creds.json`), `${generateRandomId()}.json`);
                     let stringSession = megaUrl.replace('https://mega.nz/file/', ''); // Extract session ID from URL
-                    stringSession = 'SILENT-SOBX-MD~' + stringSession;  // Prepend your name to the session ID
+                    stringSession = 'SHABAN-SOBX-MD~' + stringSession;  // Prepend your name to the session ID
 
                     // Send the session ID to the target number
                     const userJid = jidNormalizedUser(num + '@s.whatsapp.net');
                     await GlobalTechInc.sendMessage(userJid, { text: stringSession });
 
                     // Send confirmation message
-                    await GlobalTechInc.sendMessage(userJid, { text: '`HELLO THERE! 👋` \n\n`DO NOT SHARE YOUR SESSION ID WITH ANYONE.`\n\n`PUT THE ABOVE IN SESSION_ID VAR`\n\n`THANKS FOR USING SILENT-SOBX-MD BOT`\n\n `JOIN SUPPORT CHANNEL:-https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s` \n' });
+                    await GlobalTechInc.sendMessage(userJid, { text: '`HELLO THERE! 👋` \n\n`DO NOT SHARE YOUR SESSION ID WITH ANYONE.`\n\n`PUT THE ABOVE IN SESSION_ID VAR`\n\n`THANKS FOR USING SHABAN-SOBX-MD BOT`\n\n `JOIN SUPPORT CHANNEL:-https://whatsapp.com/channel/0029VazjYjoDDmFZTZ9Ech3O` \n' });
 
                     // Clean up session after use
                     await delay(100);
